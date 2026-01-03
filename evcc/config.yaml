@@ -37,6 +37,8 @@ map:
     read_only: False
 uart: true
 webui: http://[HOST]:[PORT:7070]/
+environment:
+  EVCC_DEBUG: 1
 ports:
   4712/tcp: 4712
   5200/tcp: 5200
