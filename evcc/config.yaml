@@ -1,6 +1,6 @@
 ---
 name: evcc
-version: 0.300.2
+version: 0.300.3
 slug: evcc
 description: EV Charge Controller!
 url: https://github.com/evcc-io/evcc
@@ -24,11 +24,13 @@ image: jpot123/evcc
 options: 
   sqlite_file: /data/evcc.db
   config_file: /config/evcc.yaml
+  EVCC_DEBUG: false
 schema:
   sqlite_file: str
   config_file: str?
   EVOPT_URI: url?
   SEMP_BASE_URL: url?
+  EVCC_DEBUG: bool
 host_network: true
 map: 
   - type: addon_config
@@ -38,7 +40,7 @@ map:
 uart: true
 webui: http://[HOST]:[PORT:7070]/
 environment:
-  EVCC_DEBUG: "1"
+  EVCC_DEBUG: "${EVCC_DEBUG}"
 ports:
   4712/tcp: 4712
   5200/tcp: 5200
