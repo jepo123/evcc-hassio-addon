@@ -1,6 +1,6 @@
 ---
 name: evcc
-version: 0.300.6
+version: 0.303.2
 slug: evcc
 description: EV Charge Controller!
 url: https://github.com/evcc-io/evcc
@@ -45,6 +45,7 @@ ports:
   4712/tcp: 4712
   5200/tcp: 5200
   5201/tcp: 5201
+  5202/tcp: 5202
   5353/udp: 5353
   7050/tcp: 7050
   7090/udp: 7090
@@ -56,6 +57,7 @@ ports_description:
   4712/tcp: "EEBUS"
   5200/tcp: "Modbus Proxy"
   5201/tcp: "Modbus Proxy (multi port)"
+  5201/tcp: "Modbus Proxy (Webasto)"
   5353/udp: "Multicast DNS (mDNS)"
   7050/tcp: "evopt API"
   7090/udp: "Keba"
